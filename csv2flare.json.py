@@ -19,7 +19,7 @@ df = df[["the_parent", "the_child", "child_size"]]
 
 
 # order in the groupby here matters, it determines the json nesting
-# the groupby call makes a pandas series by grouping 'keep_me' and 'and_me', while summing the numerical column 'me_too'
+# the groupby call makes a pandas series by grouping 'the_parent' and 'the_child', while summing the numerical column 'child_size'
 df1 = df.groupby(['the_parent', 'the_child'])['child_size'].sum()
 df1 = df1.reset_index()
 
@@ -39,11 +39,11 @@ for line in df1.values:
     for item in d['children']:
         keys_list.append(item['name'])
 
-    # if 'keep_me' is NOT a key in the flare.json yet, append it
-    if not keep_me in keys_list:
+    # if 'the_parent' is NOT a key in the flare.json yet, append it
+    if not the_parent in keys_list:
         d['children'].append({"name":the_parent, "children":[{"name":the_child, "size":child_size}]})
 
-    # if 'keep_me' IS a key in the flare.json, add a new child to it
+    # if 'the_parent' IS a key in the flare.json, add a new child to it
     else:
         d['children'][keys_list.index(the_parent)]['children'].append({"name":the_child, "size":child_size})
 
