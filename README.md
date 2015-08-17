@@ -5,7 +5,7 @@ python script to ingest a csv and convert it to the flare.json format used by ma
 
 2) Swap the default csv column names for your own.
 
-##notes##
+###notes###
 
 - This script creates outputs a flare.json file with 2 levels of nesting. For additional nested layers, add them in lines 32 - 47
 
