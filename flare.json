@@ -1,0 +1,31 @@
+{
+    "name": "flare",
+    "children": [
+        {
+            "name": "Parent1",
+            "children": [
+                {
+                    "name": "Child1",
+                    "size": 100
+                },
+                {
+                    "name": "Child2",
+                    "size": 150
+                }
+            ]
+        },
+        {
+            "name": "Parent2",
+            "children": [
+                {
+                    "name": "Child3",
+                    "size": 200
+                },
+                {
+                    "name": "Child4",
+                    "size": 50
+                }
+            ]
+        }
+    ]
+}
